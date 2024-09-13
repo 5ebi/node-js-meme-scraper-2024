@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import axios from 'axios';
 
-const filePath = './memes/imagefile.json';
+const filePath = './imagefile.json';
 
 async function fetchData() {
   try {
@@ -17,7 +17,7 @@ async function fetchData() {
 }
 async function readFile() {
   try {
-    const data = await fs.readFile('memes/imagefile.json', 'utf8');
+    const data = await fs.readFile('imagefile.json', 'utf8');
     const parsedData = JSON.parse(data);
     console.log('Read data from file:', parsedData);
 
