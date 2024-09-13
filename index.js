@@ -41,6 +41,16 @@ async function readFile() {
 
 async function downloadImages(urls) {
   // Iterate over each URL in the `urls` array
+
+  // Ensure the directory exists
+  try {
+    await fs.mkdir('./memes', { recursive: true });
+    console.log(`Directory './memes' created or already exists.`);
+  } catch (dirError) {
+    console.error(`Error creating directory './memes':`, dirError);
+    return; // Exit if the directory can't be created
+  }
+
   for (const [index, url] of urls.entries()) {
     try {
       // Send a GET request to the URL, requesting the image data as an array buffer
