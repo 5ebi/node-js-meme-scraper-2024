@@ -23,11 +23,11 @@ async function readFile() {
 
     // Extract every 1st, 3rd, 5th, etc. URL (0-based index: 0, 2, 4, 6, 8, ...)
     const urls = parsedData
-      //this filter selects the 1.,3.,5. and so on
-      .filter((_, index) => index % 2 === 0)
-      //the slice ensures i get only the first 10
+      // this filter selects the 1.,3.,5. and so on
+      .filter((unused, index) => index % 2 === 0)
+      // the slice ensures i get only the first 10
       .slice(0, 10)
-      //.(map) Transforms each item in an array
+      // .(map) Transforms each item in an array
       // .(item) => item.url: Extracts the url property from each object.
       .map((item) => item.url);
     console.log('Filtered URLs:', urls);
@@ -73,4 +73,6 @@ async function main() {
   }
 }
 
-main();
+main().catch((error) => {
+  console.error('An error occurred in main():', error);
+});
