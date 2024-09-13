@@ -128,12 +128,12 @@ jobs:
 
 ## TODOs
 
-- [ ] Clone the repository
-- [ ] Create a repository
-- [ ] Create a readme
-- [ ] Set up ESLint config
-- [ ] Create a `.gitignore` file and ignore the images by adding `memes`
-- [ ] Create the `memes` folder
+- [x] Clone the repository
+- [x] Create a repository
+- [x] Create a readme
+- [x] Set up ESLint config
+- [x] Create a `.gitignore` file and ignore the images by adding `memes`
+- [x] Create the `memes` folder
 - [ ] Connect to https://memegen-link-examples-upleveled.netlify.app/
 - [ ] Research methods to make request in Node.js
   - [ ] should we use a fetch request?
